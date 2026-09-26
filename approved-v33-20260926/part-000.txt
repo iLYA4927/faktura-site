@@ -1191,6 +1191,95 @@ body{background:var(--caramel-base)}
   .fmm-phone-core svg{width:22px!important;height:22px!important}
   .fmm-msg-label{font-size:8px!important}
 }
+
+/* === V39: strict alignment for all 5 mobile contact icons === */
+@media(max-width:900px){
+  .fmm-messengers{
+    display:grid!important;
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    gap:6px!important;
+    align-items:start!important;
+    justify-items:center!important;
+    padding:18px 0 20px!important;
+  }
+  .fmm-msg{
+    width:100%!important;
+    min-width:0!important;
+    display:grid!important;
+    grid-template-rows:48px 14px!important;
+    justify-items:center!important;
+    align-items:start!important;
+    row-gap:7px!important;
+    padding:0!important;
+    margin:0!important;
+    overflow:visible!important;
+  }
+  .fmm-uniform-icon{
+    width:48px!important;
+    height:48px!important;
+    padding:0!important;
+    margin:0!important;
+    border-radius:50%!important;
+    display:grid!important;
+    place-items:center!important;
+    box-sizing:border-box!important;
+    background:transparent!important;
+    border:0!important;
+    box-shadow:0 4px 12px rgba(73,48,29,.12)!important;
+    overflow:hidden!important;
+  }
+  .fmm-uniform-icon>img{
+    width:48px!important;
+    height:48px!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    border-radius:50%!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    display:block!important;
+    clip-path:circle(50% at 50% 50%)!important;
+  }
+  .fmm-phone-core{
+    width:48px!important;
+    height:48px!important;
+    margin:0!important;
+    padding:0!important;
+    border-radius:50%!important;
+    display:grid!important;
+    place-items:center!important;
+    background:#6a4b35!important;
+    box-shadow:none!important;
+  }
+  .fmm-phone-core svg{
+    width:25px!important;
+    height:25px!important;
+    display:block!important;
+  }
+  .fmm-msg-label{
+    width:100%!important;
+    max-width:none!important;
+    height:14px!important;
+    display:block!important;
+    margin:0!important;
+    padding:0!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+    font:500 9px/14px Arial,"Segoe UI",sans-serif!important;
+    letter-spacing:0!important;
+    text-align:center!important;
+    color:#49382b!important;
+  }
+}
+@media(max-width:370px){
+  .fmm-messengers{gap:4px!important}
+  .fmm-msg{grid-template-rows:44px 13px!important;row-gap:6px!important}
+  .fmm-uniform-icon,.fmm-uniform-icon>img,.fmm-phone-core{
+    width:44px!important;height:44px!important
+  }
+  .fmm-phone-core svg{width:23px!important;height:23px!important}
+  .fmm-msg-label{font-size:8px!important;line-height:13px!important;height:13px!important}
+}
 </style></head><body class="mobile-home-active">
 <div id="fakturaMobileHome" aria-label="Мобильная главная ФАКТУРА">
   <section class="fm-hero">
