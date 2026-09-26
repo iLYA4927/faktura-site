@@ -18,7 +18,7 @@ html,body{margin:0;min-height:100%;background:#f5f0e8;color:#211e1a;font-family:
 (async()=>{
   const parts=["approved-v33-20260926/part-000.txt","approved-v33-20260926/part-001.txt","approved-v33-20260926/part-002.txt","approved-v33-20260926/part-003.txt","approved-v33-20260926/part-004.txt","approved-v33-20260926/part-005.txt","approved-v33-20260926/part-006.txt","approved-v33-20260926/part-007.txt","approved-v33-20260926/part-008.txt","approved-v33-20260926/part-009.txt","approved-v33-20260926/part-010.txt","approved-v33-20260926/part-011.txt","approved-v33-20260926/part-012.txt","approved-v33-20260926/part-013.txt","approved-v33-20260926/part-014.txt","approved-v33-20260926/part-015.txt","approved-v33-20260926/part-016.txt","approved-v33-20260926/part-017.txt","approved-v33-20260926/part-018.txt","approved-v33-20260926/part-019.txt","approved-v33-20260926/part-020.txt","approved-v33-20260926/part-021.txt","approved-v33-20260926/part-022.txt","approved-v33-20260926/part-023.txt","approved-v33-20260926/part-024.txt","approved-v33-20260926/part-025.txt","approved-v33-20260926/part-026.txt","approved-v33-20260926/part-027.txt","approved-v33-20260926/part-028.txt","approved-v33-20260926/part-029.txt","approved-v33-20260926/part-030.txt","approved-v33-20260926/part-031.txt"];
   const texts=await Promise.all(parts.map(async p=>{
-    const r=await fetch(p+"?v=34",{cache:"no-store"});
+    const r=await fetch(p+"?v=35",{cache:"no-store"});
     if(!r.ok) throw new Error(p+" "+r.status);
     return r.text();
   }));
