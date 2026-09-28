@@ -13,22 +13,37 @@ html,body{margin:0;min-height:100%;background:#f5f0e8;color:#211e1a;font-family:
 </style>
 </head>
 <body>
-<div id="boot"><div><b>ФАКТУРА</b><span>Загружаем сайт…</span></div></div>
+<div id="boot"><div><b>ФАКТУРА</b><span>Загружаем сайт… 0%</span></div></div>
 <script>
 (async()=>{
   const parts=Array.from({length:32},(_,i)=>"approved-v33-20260926/part-"+String(i).padStart(3,"0")+".txt");
-  const texts=await Promise.all(parts.map(async p=>{
-    const r=await fetch(p+"?v=39",{cache:"no-store"});
-    if(!r.ok) throw new Error(p+" "+r.status);
-    return r.text();
-  }));
+  const texts=[];
+  for(let i=0;i<parts.length;i++){
+    const p=parts[i];
+    let lastErr=null;
+    for(let attempt=1;attempt<=3;attempt++){
+      try{
+        const r=await fetch(p+"?v=40",{cache:"no-store"});
+        if(!r.ok) throw new Error(p+" "+r.status);
+        texts.push(await r.text());
+        lastErr=null;
+        break;
+      }catch(err){
+        lastErr=err;
+        await new Promise(resolve=>setTimeout(resolve,500*attempt));
+      }
+    }
+    if(lastErr) throw lastErr;
+    const s=document.querySelector("#boot span");
+    if(s) s.textContent="Загружаем сайт… "+Math.round(((i+1)/parts.length)*100)+"%";
+  }
   let html=texts.join("");
 
   document.open();
   document.write(html);
   document.close();
 })().catch(err=>{
-  document.getElementById("boot").innerHTML="<div><b>ФАКТУРА</b><span>Обновите страницу через несколько секунд.</span></div>";
+  document.getElementById("boot").innerHTML="<div><b>ФАКТУРА</b><span>Не удалось загрузить сайт. Обновите страницу.</span></div>";
   console.error(err);
 });
 </script>
