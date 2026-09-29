@@ -1203,6 +1203,17 @@ body{background:var(--caramel-base)}
  .fmm-phone-core svg{width:22px!important;height:22px!important;margin:0!important;display:block!important;transform:none!important}
  .fmm-msg-label{width:100%!important;height:16px!important;margin:0!important;padding:0!important;white-space:nowrap!important;overflow:visible!important;font:500 9px/16px Arial,"Segoe UI",sans-serif!important;letter-spacing:0!important;text-align:center!important;color:#49382b!important}
 }
+
+/* V43 — deterministic icon artwork, no PNG intrinsic-size dependence */
+@media(max-width:900px){
+ .fmm-messengers{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:4px!important;align-items:start!important;width:100%!important;padding:18px 0 20px!important;margin:0!important}
+ .fmm-msg{width:100%!important;height:auto!important;display:grid!important;grid-template-rows:44px 16px!important;row-gap:7px!important;justify-items:center!important;align-items:start!important;padding:0!important;margin:0!important}
+ .fmm-uniform-icon,.fmm-phone-core{width:44px!important;height:44px!important;margin:0!important;padding:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;overflow:hidden!important;box-sizing:border-box!important;box-shadow:none!important}
+ .fmm-uniform-icon>img{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;max-width:44px!important;max-height:44px!important;margin:0!important;padding:0!important;border:0!important;border-radius:50%!important;object-fit:cover!important;object-position:50% 50%!important;display:block!important;transform:none!important}
+ .fmm-phone-core{background:#6a4b35!important}
+ .fmm-phone-core svg{width:21px!important;height:21px!important;display:block!important}
+ .fmm-msg-label{width:100%!important;height:16px!important;margin:0!important;padding:0!important;text-align:center!important;white-space:nowrap!important;font:500 9px/16px Arial,"Segoe UI",sans-serif!important;letter-spacing:0!important;color:#49382b!important}
+}
 </style></head><body class="mobile-home-active">
 <div id="fakturaMobileHome" aria-label="Мобильная главная ФАКТУРА">
   <section class="fm-hero">
