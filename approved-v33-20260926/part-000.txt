@@ -1361,6 +1361,45 @@ body{background:var(--caramel-base)}
     background-color:#fff!important;
   }
 }
+
+/* V50 — final visual balance: keep equal circles, reduce over-cropping */
+@media(max-width:900px){
+  .fmm-icon-disk{
+    width:42px!important;
+    height:42px!important;
+    min-width:42px!important;
+    min-height:42px!important;
+    max-width:42px!important;
+    max-height:42px!important;
+    flex:0 0 42px!important;
+    border-radius:50%!important;
+    overflow:hidden!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    box-shadow:none!important;
+    border:0!important;
+  }
+  .fmm-icon-wa{
+    background-size:120% 120%!important;
+    background-color:#27b843!important;
+  }
+  .fmm-icon-tg{
+    background-size:120% 120%!important;
+    background-color:#26a9e0!important;
+  }
+  .fmm-icon-max{
+    background-size:120% 120%!important;
+    background-color:#6840ed!important;
+  }
+  .fmm-icon-call{
+    background-size:100% 100%!important;
+    background-color:#6a4b35!important;
+  }
+  .fmm-icon-2gis{
+    background-size:122% 122%!important;
+    background-color:#fff!important;
+  }
+}
 </style></head><body class="mobile-home-active">
 <div id="fakturaMobileHome" aria-label="Мобильная главная ФАКТУРА">
   <section class="fm-hero">
