@@ -18,11 +18,99 @@ html,body{margin:0;min-height:100%;background:#f5f0e8;color:#211e1a;font-family:
 (async()=>{
   const parts=Array.from({length:32},(_,i)=>"approved-v33-20260926/part-"+String(i).padStart(3,"0")+".txt");
   const texts=await Promise.all(parts.map(async p=>{
-    const r=await fetch(p+"?v=45",{cache:"no-store"});
+    const r=await fetch(p+"?v=46",{cache:"no-store"});
     if(!r.ok) throw new Error(p+" "+r.status);
     return r.text();
   }));
   let html=texts.join("");
+  const v46Style = `
+<style id="faktura-v46-icon-normalization">
+@media(max-width:900px){
+  .fmm-messengers{
+    display:grid!important;
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    align-items:start!important;
+    gap:5px!important;
+  }
+  .fmm-msg{
+    width:100%!important;
+    min-width:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:7px!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  .fmm-uniform-icon{
+    width:44px!important;
+    height:44px!important;
+    min-width:44px!important;
+    min-height:44px!important;
+    max-width:44px!important;
+    max-height:44px!important;
+    box-sizing:border-box!important;
+    border-radius:50%!important;
+    display:grid!important;
+    place-items:center!important;
+    padding:0!important;
+    margin:0 auto!important;
+    overflow:hidden!important;
+    background:#f5e4ce!important;
+    border:1px solid rgba(92,63,40,.16)!important;
+    box-shadow:0 3px 9px rgba(73,48,29,.08)!important;
+  }
+  .fmm-uniform-icon>img{
+    width:36px!important;
+    height:36px!important;
+    min-width:36px!important;
+    min-height:36px!important;
+    max-width:36px!important;
+    max-height:36px!important;
+    display:block!important;
+    object-fit:cover!important;
+    margin:0!important;
+    padding:0!important;
+    transform-origin:center!important;
+  }
+  .fmm-msg:nth-child(1) .fmm-uniform-icon>img,
+  .fmm-msg:nth-child(2) .fmm-uniform-icon>img,
+  .fmm-msg:nth-child(3) .fmm-uniform-icon>img{
+    transform:scale(1.22)!important;
+    border-radius:50%!important;
+  }
+  .fmm-msg:nth-child(4) .fmm-phone-core{
+    width:36px!important;
+    height:36px!important;
+    min-width:36px!important;
+    min-height:36px!important;
+    max-width:36px!important;
+    max-height:36px!important;
+    border-radius:50%!important;
+    display:grid!important;
+    place-items:center!important;
+    background:#6a4b35!important;
+  }
+  .fmm-msg:nth-child(4) .fmm-phone-core svg{
+    width:18px!important;
+    height:18px!important;
+  }
+  .fmm-msg:nth-child(5) .fmm-uniform-icon>img{
+    transform:scale(1.14)!important;
+    border-radius:10px!important;
+  }
+  .fmm-msg-label{
+    width:100%!important;
+    text-align:center!important;
+    margin:0!important;
+    padding:0!important;
+    white-space:nowrap!important;
+    font:500 9px/14px Arial,"Segoe UI",sans-serif!important;
+  }
+}
+</style>`;
+  html=html.replace("</head>",v46Style+"</head>");
 
   document.open();
   document.write(html);
