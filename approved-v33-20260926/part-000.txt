@@ -1309,6 +1309,8 @@ body{background:var(--caramel-base)}
  .fmm-phone-core svg{width:22px!important;height:22px!important;margin:0!important;transform:none!important}
  .fmm-msg-label{height:16px!important;line-height:16px!important;margin:0!important;text-align:center!important}
 }
+
+@media(max-width:900px){.fmm-messengers{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:4px!important;justify-items:center!important}.fmm-msg{grid-template-rows:44px 16px!important;row-gap:8px!important;justify-items:center!important}.fmm-uniform-icon,.fmm-phone-core{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;max-width:44px!important;max-height:44px!important;margin:0!important;padding:0!important;border-radius:50%!important;box-sizing:border-box!important;transform:none!important}.fmm-uniform-icon>img{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;max-width:44px!important;max-height:44px!important;margin:0!important;padding:0!important;object-fit:cover!important;border-radius:50%!important;transform:none!important}.fmm-phone-core svg{width:22px!important;height:22px!important;margin:0!important;transform:none!important}.fmm-msg-label{height:16px!important;line-height:16px!important;margin:0!important;text-align:center!important}}
 </style></head><body class="mobile-home-active">
 <div id="fakturaMobileHome" aria-label="Мобильная главная ФАКТУРА">
   <section class="fm-hero">
