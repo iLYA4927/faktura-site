@@ -1321,6 +1321,46 @@ body{background:var(--caramel-base)}
   .fmm-icon-disk{width:39px!important;height:39px!important;min-width:39px!important;min-height:39px!important;max-width:39px!important;max-height:39px!important;flex-basis:39px!important}
   .fmm-msg-label{font-size:8px!important}
 }
+
+/* V49 — optical crop: remove baked-in pale halos from image files */
+@media(max-width:900px){
+  .fmm-icon-disk{
+    width:42px!important;
+    height:42px!important;
+    min-width:42px!important;
+    min-height:42px!important;
+    max-width:42px!important;
+    max-height:42px!important;
+    flex:0 0 42px!important;
+    border-radius:50%!important;
+    overflow:hidden!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    box-shadow:none!important;
+    border:0!important;
+  }
+  /* These PNGs contain a light outer halo. Zoom them so only the real colored disc remains. */
+  .fmm-icon-wa{
+    background-size:139% 139%!important;
+    background-color:#27b843!important;
+  }
+  .fmm-icon-tg{
+    background-size:139% 139%!important;
+    background-color:#26a9e0!important;
+  }
+  .fmm-icon-max{
+    background-size:139% 139%!important;
+    background-color:#6840ed!important;
+  }
+  .fmm-icon-call{
+    background-size:100% 100%!important;
+    background-color:#6a4b35!important;
+  }
+  .fmm-icon-2gis{
+    background-size:154% 154%!important;
+    background-color:#fff!important;
+  }
+}
 </style></head><body class="mobile-home-active">
 <div id="fakturaMobileHome" aria-label="Мобильная главная ФАКТУРА">
   <section class="fm-hero">
