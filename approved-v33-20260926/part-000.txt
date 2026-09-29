@@ -1260,6 +1260,67 @@ body{background:var(--caramel-base)}
   .fmm-icon-file{width:40px!important;height:40px!important;min-width:40px!important;min-height:40px!important;max-width:40px!important;max-height:40px!important}
   .fmm-msg-label{font-size:8px!important}
 }
+
+/* V48 — hard circular mask for all five real icon files */
+@media(max-width:900px){
+  .fmm-messengers{
+    display:grid!important;
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    gap:5px!important;
+    align-items:start!important;
+    padding:18px 0 20px!important;
+    margin:0!important;
+  }
+  .fmm-msg{
+    width:100%!important;
+    min-width:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:7px!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    text-decoration:none!important;
+  }
+  .fmm-icon-disk{
+    width:42px!important;
+    height:42px!important;
+    min-width:42px!important;
+    min-height:42px!important;
+    max-width:42px!important;
+    max-height:42px!important;
+    display:block!important;
+    flex:0 0 42px!important;
+    box-sizing:border-box!important;
+    border-radius:50%!important;
+    overflow:hidden!important;
+    background-repeat:no-repeat!important;
+    background-position:center!important;
+    box-shadow:0 2px 7px rgba(73,48,29,.10)!important;
+  }
+  .fmm-icon-wa{background-image:url("assets/wa.png?v=48")!important;background-size:112% 112%!important;background-color:#27b843!important}
+  .fmm-icon-tg{background-image:url("assets/tg.png?v=48")!important;background-size:112% 112%!important;background-color:#26a9e0!important}
+  .fmm-icon-max{background-image:url("assets/max.png?v=48")!important;background-size:112% 112%!important;background-color:#6840ed!important}
+  .fmm-icon-call{background-image:url("assets/call.svg?v=48")!important;background-size:100% 100%!important;background-color:#6a4b35!important}
+  .fmm-icon-2gis{background-image:url("assets/2gis.png?v=48")!important;background-size:132% 132%!important;background-color:#fff!important}
+  .fmm-msg-label{
+    display:block!important;
+    width:100%!important;
+    margin:0!important;
+    padding:0!important;
+    text-align:center!important;
+    white-space:nowrap!important;
+    font:500 9px/14px Arial,"Segoe UI",sans-serif!important;
+    color:#49382b!important;
+  }
+}
+@media(max-width:370px){
+  .fmm-icon-disk{width:39px!important;height:39px!important;min-width:39px!important;min-height:39px!important;max-width:39px!important;max-height:39px!important;flex-basis:39px!important}
+  .fmm-msg-label{font-size:8px!important}
+}
 </style></head><body class="mobile-home-active">
 <div id="fakturaMobileHome" aria-label="Мобильная главная ФАКТУРА">
   <section class="fm-hero">
@@ -1287,19 +1348,19 @@ body{background:var(--caramel-base)}
   <div class="fmm-bottom">
     <div class="fmm-messengers" aria-label="Способы связи">
       <a class="fmm-msg" href="https://wa.me/79375894499" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <img class="fmm-icon-file" src="assets/wa.png?v=47" alt=""><span class="fmm-msg-label">WhatsApp</span>
+        <span class="fmm-icon-disk fmm-icon-wa" aria-hidden="true"></span><span class="fmm-msg-label">WhatsApp</span>
       </a>
       <a class="fmm-msg placeholder-contact" data-service="Telegram" href="#" aria-label="Telegram">
-        <img class="fmm-icon-file" src="assets/tg.png?v=47" alt=""><span class="fmm-msg-label">Telegram</span>
+        <span class="fmm-icon-disk fmm-icon-tg" aria-hidden="true"></span><span class="fmm-msg-label">Telegram</span>
       </a>
       <a class="fmm-msg placeholder-contact" data-service="MAX" href="#" aria-label="MAX">
-        <img class="fmm-icon-file" src="assets/max.png?v=47" alt=""><span class="fmm-msg-label">MAX</span>
+        <span class="fmm-icon-disk fmm-icon-max" aria-hidden="true"></span><span class="fmm-msg-label">MAX</span>
       </a>
       <a class="fmm-msg" href="tel:+79375894499" aria-label="Позвонить">
-        <img class="fmm-icon-file" src="assets/call.svg?v=47" alt=""><span class="fmm-msg-label">Позвонить</span>
+        <span class="fmm-icon-disk fmm-icon-call" aria-hidden="true"></span><span class="fmm-msg-label">Позвонить</span>
       </a>
       <a class="fmm-msg" href="https://2gis.ru/nabchelny/geo/70000001115675705" target="_blank" rel="noopener" aria-label="2ГИС">
-        <img class="fmm-icon-file" src="assets/2gis.png?v=47" alt=""><span class="fmm-msg-label">2ГИС</span>
+        <span class="fmm-icon-disk fmm-icon-2gis" aria-hidden="true"></span><span class="fmm-msg-label">2ГИС</span>
       </a>
     </div>
     <a class="fmm-address-card" href="https://2gis.ru/nabchelny/directions/points/|52.43049,55.742438" target="_blank" rel="noopener">
