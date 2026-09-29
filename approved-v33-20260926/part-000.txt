@@ -1292,6 +1292,13 @@ body{background:var(--caramel-base)}
  .fmm-phone-core svg{width:23px!important;height:23px!important;display:block!important}
  .fmm-msg-label{width:100%!important;height:16px!important;margin:0!important;padding:0!important;text-align:center!important;white-space:nowrap!important;font:500 9px/16px Arial,"Segoe UI",sans-serif!important;letter-spacing:0!important;color:#49382b!important}
 }
+
+/* V42 — optical sizing after real-device check */
+@media(max-width:900px){
+ .fmm-messengers .fmm-msg:nth-child(4) .fmm-phone-core{width:40px!important;height:40px!important;margin:4px!important}
+ .fmm-messengers .fmm-msg:nth-child(4) .fmm-phone-core svg{width:20px!important;height:20px!important}
+ .fmm-messengers .fmm-msg:nth-child(5) .fmm-uniform-icon>img{width:44px!important;height:44px!important;max-width:44px!important;max-height:44px!important}
+}
 </style></head><body class="mobile-home-active">
 <div id="fakturaMobileHome" aria-label="Мобильная главная ФАКТУРА">
   <section class="fm-hero">
