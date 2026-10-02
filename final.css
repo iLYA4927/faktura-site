@@ -14,3 +14,45 @@
   .mobile-footer-v1 .mf-socials a{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0;color:#5e5145;font-size:9px;text-align:center}
   .mobile-footer-v1 .mf-socials b{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#fffaf3;border:1px solid #e0d1c0;color:#4d3928;font-size:18px;font-weight:500;box-shadow:0 7px 18px rgba(72,51,32,.06)}
 }
+
+/* V44 — approved mobile catalog: folders first, two-column product cards */
+@media(max-width:650px){
+  body:has(#catalogFolders) .page-hero.final{padding-bottom:10px}
+  body:has(#catalogFolders) .final-section{padding-top:14px}
+  #catalogFolders.catalog-folders{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+    margin:0 0 22px!important;
+  }
+  #catalogFolders .folder-card{
+    display:block!important;
+    min-width:0!important;
+    padding:8px!important;
+    border-radius:16px!important;
+  }
+  #catalogFolders .folder-thumb{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:1.35/1!important;
+    border-radius:12px!important;
+    margin-bottom:9px!important;
+  }
+  #catalogFolders .folder-card h3{font-size:17px!important;line-height:1.08!important;margin:3px 0 5px!important}
+  #catalogFolders .folder-card small{font-size:10px!important}
+  #catalogFolders .folder-card span{font-size:10px!important}
+  body:has(#catalogFolders) .catalog-controls.final-controls{gap:8px!important;margin-bottom:16px!important}
+  body:has(#catalogFolders) .catalog-search{width:100%!important}
+  #catalogGrid.product-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:10px!important;
+  }
+  #catalogGrid .catalog-product{min-width:0!important;border-radius:14px!important}
+  #catalogGrid .catalog-product .texture-art{height:auto!important;aspect-ratio:.82/1!important}
+  #catalogGrid .catalog-product .product-body{padding:11px!important}
+  #catalogGrid .catalog-product .product-body small{font-size:8px!important}
+  #catalogGrid .catalog-product h3{font-size:18px!important;margin:5px 0!important}
+  #catalogGrid .catalog-product p{font-size:10px!important;line-height:1.35!important;margin:5px 0!important}
+  #catalogGrid .catalog-product .price{font-size:12px!important}
+}
