@@ -1524,3 +1524,13 @@ const PRODUCTS=[{"id":"yw-1802","category":"Панели","series":"Древес
   body.mobile-home-active:has(#catalogGrid) .catalog-grid .product-body p{font-size:9px!important;line-height:1.3!important;margin:4px 0!important}
   body.mobile-home-active:has(#catalogGrid) .catalog-grid .price{font-size:11px!important}
 }
+
+/* V52 — unified vector messenger row; no PNG padding/cropping */
+@media(max-width:900px){
+ .fmm-icon-disk{width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;max-width:42px!important;max-height:42px!important;flex:0 0 42px!important;border-radius:50%!important;background-size:42px 42px!important;background-position:center!important;background-repeat:no-repeat!important;background-color:transparent!important;box-shadow:none!important;border:0!important}
+ .fmm-icon-wa{background-image:url("assets/wa.svg?v=52")!important}
+ .fmm-icon-tg{background-image:url("assets/tg.svg?v=52")!important}
+ .fmm-icon-max{background-image:url("assets/max.svg?v=52")!important}
+ .fmm-icon-call{background-image:url("assets/call.svg?v=52")!important}
+ .fmm-icon-2gis{background-image:url("assets/gis.svg?v=52")!important}
+}
