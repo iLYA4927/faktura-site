@@ -1,4 +1,5 @@
 name: Deploy GitHub Pages
+# redeploy: 2026-10-03-v46
 
 on:
   push:
