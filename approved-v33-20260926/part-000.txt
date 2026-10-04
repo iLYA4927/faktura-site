@@ -1403,7 +1403,7 @@ body{background:var(--caramel-base)}
 </style></head><body class="mobile-home-active">
 <div id="fakturaMobileHome" aria-label="Мобильная главная ФАКТУРА">
   <section class="fm-hero">
-    <div class="fm-top"><div><a href="#home" class="fm-logo">ФАКТУРА</a><span class="fm-logo-sub">интерьерные решения</span></div><button class="fm-menu-open" id="fmMenuOpen" type="button"><span>Меню</span><span class="fm-burger"><i></i><i></i><i></i></span></button></div>
+    <div class="fm-top"><div><a href="#home" class="fm-logo">ФАКТУРА</a><span class="fm-logo-sub">интерьерные решения</span></div><button class="fm-menu-open" id="fmMenuOpen" type="button" onclick="document.getElementById('fakturaMobileMenu').classList.add('open');document.getElementById('fakturaMobileShade').classList.add('open');document.getElementById('fakturaMobileMenu').setAttribute('aria-hidden','false');document.body.style.overflow='hidden';"><span>Меню</span><span class="fm-burger"><i></i><i></i><i></i></span></button></div>
     <div class="fm-copy"><p class="fm-eyebrow">Интерьерные материалы ·<br>Набережные Челны</p><h1 class="fm-title">Современная<br>стена начинается<br>с фактуры</h1><p class="fm-lead">Бамбуковые панели, профили<br>и готовые решения<br>для стильного интерьера.</p><a class="fm-catalog" href="#catalog">Перейти в каталог&nbsp; →</a></div>
     <a href="#mobileContact" class="fm-down" aria-label="К способам связи"></a>
   </section>
@@ -1417,7 +1417,7 @@ body{background:var(--caramel-base)}
 </div>
 <div id="fakturaMobileShade"></div>
 <aside id="fakturaMobileMenu" aria-hidden="true">
-  <div class="fmm-head"><button class="fmm-close" id="fmMenuClose" type="button" aria-label="Закрыть меню"></button></div>
+  <div class="fmm-head"><button class="fmm-close" id="fmMenuClose" type="button" aria-label="Закрыть меню" onclick="document.getElementById('fakturaMobileMenu').classList.remove('open');document.getElementById('fakturaMobileShade').classList.remove('open');document.body.style.overflow='';"></button></div>
   <nav class="fmm-nav">
     <a href="#catalog"><span class="fmm-ico fmm-svgicon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="5" width="6" height="22" rx="1.5" fill="#4f3828"/><rect x="11.5" y="3.5" width="7" height="25" rx="1.5" fill="#c69b70"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#8b6547"/><path d="M8 5v22M17 4v24M25 6v20" stroke="#f4e6d3" stroke-width="1"/></svg></span><span class="fmm-link-text">Бамбуковые панели</span><span class="fmm-arr">›</span></a>
     <a href="#projects"><span class="fmm-ico fmm-svgicon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.2 16 4l12 10.2"/><path d="M7 12.5V27h18V12.5"/><path d="M10 22h12"/><path d="M11 18h10v6H11z"/><path d="M16 9v4"/></svg></span><span class="fmm-link-text">Проекты</span><span class="fmm-arr">›</span></a>
